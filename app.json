@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "TotalPeaks Outdoor Challenges App",
+    "slug": "totalpeaks-outdoor-challenges",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.rork.totalpeaks-outdoor-challenges",
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
+        "NSLocationAlwaysUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
+        "NSLocationWhenInUseUsageDescription": "Allow $(PRODUCT_NAME) to use your location.",
+        "UIBackgroundModes": [
+          "location"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      },
+      "package": "app.rork.totalpeaks-outdoor-challenges",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "android.permission.VIBRATE"
+      ]
+    },
+    "web": {},
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://rork.com/"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "isAndroidForegroundServiceEnabled": true,
+          "isAndroidBackgroundLocationEnabled": true,
+          "isIosBackgroundLocationEnabled": true,
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
